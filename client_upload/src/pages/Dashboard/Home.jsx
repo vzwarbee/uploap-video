@@ -6,7 +6,7 @@ import PageMeta from '../../components/common/PageMeta';
 import RecentVideoCards from '../../components/ecommerce/RecentVideoCards';
 import { Fab } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
-import UploadVideo from '../../components/common/UploadVideo';
+import ModalUploadVideo from '../../components/ui/modal/ModalUploadVideo';
 import React from 'react';
 
 export default function Home() {
@@ -38,15 +38,15 @@ export default function Home() {
         <div className="fixed z-[99999] bottom-2 right-2 md:bottom-6 md:right-6">
           <Fab
             size="medium"
-            color="primary"
             aria-label="add"
+            color="primary"
             onClick={() => setModalUpload(!modalUpload)}
           >
             <AddIcon />
           </Fab>
         </div>
       </div>
-      <UploadVideo openModal={modalUpload} setOpenModal={() => setModalUpload(!modalUpload)} />
+      <ModalUploadVideo openModal={modalUpload} setOpenModal={() => setModalUpload(!modalUpload)} />
     </>
   );
 }

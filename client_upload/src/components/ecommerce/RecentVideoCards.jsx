@@ -87,7 +87,7 @@ export default function RecentVideoCards() {
               videos?.data?.map((video) => (
                 <div
                   key={randomKeyProp(video.uid)}
-                  className="relative col-span-12 xl:col-span-3 md:col-span-4 border rounded-lg shadow-md overflow-hidden"
+                  className="relative col-span-12 xl:col-span-3 md:col-span-4 border border-gray-200 bg-gray-100 dark:border-gray-800 rounded-lg shadow-md overflow-hidden"
                 >
                   <VideoCard video={video} type="hls" />
                   <div className="p-4">
