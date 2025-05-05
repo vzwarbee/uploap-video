@@ -4,20 +4,24 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import './index.css';
 import { AppWrapper } from './components/common/PageMeta';
 import App from './App';
-import { ThemeProvider } from './context/ThemeContext';
+import { ThemeProviderTailwind } from './context/ThemeContext';
+import { ThemeProvider } from '@mui/material/styles';
 import ToastTifyContainer from './components/common/ToastTifyContainer';
+import ColorThemeMUI from './context/ColorThemeMUI';
 
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <ThemeProvider>
-        <ToastTifyContainer />
-        <AppWrapper>
-          <App />
-        </AppWrapper>
-      </ThemeProvider>
+      <ThemeProviderTailwind>
+        <ThemeProvider theme={ColorThemeMUI}>
+          <ToastTifyContainer />
+          <AppWrapper>
+            <App />
+          </AppWrapper>
+        </ThemeProvider>
+      </ThemeProviderTailwind>
     </QueryClientProvider>
   </StrictMode>
 );

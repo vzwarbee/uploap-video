@@ -11,7 +11,7 @@ import { fetchVideos } from '../../api/api';
 import { useState } from 'react';
 import VideoPagination from '../common/VideoPagination';
 import FileUploadIcon from '@mui/icons-material/FileUpload';
-import UploadVideo from '../common/UploadVideo';
+import UploadVideo from '../ui/modal/ModalUploadVideo';
 import { Dropdown } from '../ui/dropdown/Dropdown';
 import { DropdownItem } from '../ui/dropdown/DropdownItem';
 import { MoreDotIcon } from '../../icons';

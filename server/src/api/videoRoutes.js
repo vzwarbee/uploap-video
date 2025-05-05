@@ -12,6 +12,7 @@ const router = express.Router();
 const uploadVideoToCloudflare = async (filePath, fileName) => {
   const formData = new FormData();
   formData.append("file", fs.createReadStream(filePath), fileName);
+  // formData.append("file", fs.createReadStream(filePath), fileName);
 
   const response = await axios.post(CLOUDFLARE_STREAM_URL, formData, {
     headers: {
